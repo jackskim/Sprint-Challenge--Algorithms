@@ -66,10 +66,11 @@ search.
 4. If the egg breaks:
    4a. Go one floor below and throw an egg
    4b. If the egg does not break, return f
-   4c. If the egg does break, we're too high. Set the max = f
+   4c. If the egg does break, we're too high. Set the max floor to f
    4d. Go back to step 1
 5. If the egg doesn't break:
-   5a. Go up one floor and throw an egg
-   5b. If the egg breaks, return f
-   5c. If the egg doesn't break, we're too low. Set the min = f+1
+   5a. We're too low. Set the min floor to f
    5d. Go back to step 1
+
+Runtime: Since we're dividing the remaining number of floors in
+half each iteration, the runtime is O(log n)
